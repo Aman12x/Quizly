@@ -1,0 +1,411 @@
+1
+00:00:00,000 --> 00:00:13,200
+So we've been talking a lot about the neural net, but we haven't really gone into detail
+
+2
+00:00:13,200 --> 00:00:15,960
+about what neural network is.
+
+3
+00:00:15,960 --> 00:00:23,240
+So a neural network typically consists of, it contains three different types of layers.
+
+4
+00:00:23,240 --> 00:00:30,920
+We have a input layer over here that takes input from our domain.
+
+5
+00:00:30,920 --> 00:00:43,360
+So for example, the example that input may be image data transferred into numbers that
+
+6
+00:00:43,360 --> 00:00:45,760
+we then push into the model.
+
+7
+00:00:45,760 --> 00:00:49,120
+So that's the input layer that handles that.
+
+8
+00:00:49,120 --> 00:00:51,160
+Then we have something called hidden layers.
+
+9
+00:00:51,160 --> 00:00:54,960
+Now these are layers that are not the input or output layers.
+
+10
+00:00:54,960 --> 00:00:58,840
+So these kind of hidden in the middle between those two.
+
+11
+00:00:58,840 --> 00:01:02,760
+And they take input from one layer and pass the output to another layer.
+
+12
+00:01:02,760 --> 00:01:05,920
+And you can have multiple hidden layers, chain one after the other.
+
+13
+00:01:05,920 --> 00:01:11,880
+And that in fact, it is that that creates a deep learning model.
+
+14
+00:01:11,880 --> 00:01:14,280
+And we have the output layer.
+
+15
+00:01:14,280 --> 00:01:20,080
+So the output layer is the final layer that makes a prediction based on whatever was put
+
+16
+00:01:20,080 --> 00:01:24,600
+under hidden layer and pass through all those hidden layers and then pass to the final
+
+17
+00:01:24,600 --> 00:01:27,200
+output layer.
+
+18
+00:01:27,200 --> 00:01:36,520
+So the perceptron is at its very core, almost like a single layer neural network with four
+
+19
+00:01:36,520 --> 00:01:39,600
+main parameters.
+
+20
+00:01:39,600 --> 00:01:43,840
+So we'll explain that in just a moment.
+
+21
+00:01:43,840 --> 00:01:50,440
+But by putting all these perceptrons together, that is what creates a neural network.
+
+22
+00:01:50,440 --> 00:01:54,480
+But let's have a look at what a perceptron looks like.
+
+23
+00:01:54,480 --> 00:01:59,080
+So as I said, single layer neural network, four main parameters.
+
+24
+00:01:59,080 --> 00:02:03,240
+We have the input values over here.
+
+25
+00:02:03,240 --> 00:02:06,480
+We have the weights here.
+
+26
+00:02:06,480 --> 00:02:13,000
+So this is those needs W's plus a bias term over here.
+
+27
+00:02:13,000 --> 00:02:21,360
+We take some of these values and the weights and the biases, which is output, sorry, the
+
+28
+00:02:21,360 --> 00:02:27,200
+inputs and weights and the biases, which is output from here.
+
+29
+00:02:27,200 --> 00:02:33,560
+And then there is this activation function, which consumes that output and the sum outputs
+
+30
+00:02:33,560 --> 00:02:42,400
+and outputs a different value, which is of course, then leads on to output.
+
+31
+00:02:42,400 --> 00:02:49,280
+So this diagram here shows the forward propagation of information through a single neural network.
+
+32
+00:02:49,280 --> 00:02:56,320
+When I say forward propagation, it's essentially the forward movement of information through
+
+33
+00:02:56,320 --> 00:03:00,040
+a network.
+
+34
+00:03:00,040 --> 00:03:03,680
+Here the information is defined by its inputs.
+
+35
+00:03:03,680 --> 00:03:11,800
+We have x1, x2 all the way through to xm where m is just the number of features on number
+
+36
+00:03:11,800 --> 00:03:16,680
+of input values in the network.
+
+37
+00:03:16,680 --> 00:03:21,640
+And we of course take the sum of the multiplication of the inputs and their weights.
+
+38
+00:03:21,640 --> 00:03:31,760
+So we multiply this x1 by w1, giving us something like this.
+
+39
+00:03:31,760 --> 00:03:37,400
+And then we add on the, so we sum those, sorry.
+
+40
+00:03:37,400 --> 00:03:43,760
+And then we add on the bias to the end of that, sorry, sorry.
+
+41
+00:03:43,760 --> 00:03:49,040
+This calculation returns a single number.
+
+42
+00:03:49,040 --> 00:03:52,640
+Depending so for each one of these values.
+
+43
+00:03:52,640 --> 00:04:01,480
+So for x1, w1, we are going to output a final value here.
+
+44
+00:04:01,480 --> 00:04:10,760
+So this will be, let's call it, just s1 for now.
+
+45
+00:04:10,760 --> 00:04:17,760
+And then we would also, for example, s2 and all the way down to sm.
+
+46
+00:04:17,760 --> 00:04:25,760
+These are all then fed into the activation function, sorry, go back to, I don't know,
+
+47
+00:04:25,760 --> 00:04:27,520
+I said that wrong.
+
+48
+00:04:27,520 --> 00:04:35,360
+So we go back because in this case, so this is to whoever's editing the video, in this
+
+49
+00:04:35,360 --> 00:04:39,960
+case that's wrong, all of these sum together, so they do actually output a single value
+
+50
+00:04:39,960 --> 00:04:40,960
+from the sum.
+
+51
+00:04:40,960 --> 00:04:46,080
+So just go back to before, is there anything about having multiple values?
+
+52
+00:04:46,080 --> 00:04:53,160
+So from all of these, this sum is actually going from one or x1, x2 all the way through
+
+53
+00:04:53,160 --> 00:04:58,400
+to m and w1, 2 all the way through to m.
+
+54
+00:04:58,400 --> 00:05:00,240
+All of that outputs a single value here.
+
+55
+00:05:00,240 --> 00:05:03,800
+Okay, so our sum value, which we'll just call s for now.
+
+56
+00:05:03,800 --> 00:05:10,400
+Okay, we don't actually use the notation s, but that's just what we will show here for
+
+57
+00:05:10,400 --> 00:05:12,400
+now.
+
+58
+00:05:12,400 --> 00:05:21,040
+And this sum value is fed into an activation function where it generates the apple, speak
+
+59
+00:05:21,040 --> 00:05:24,120
+more of activation functions very soon.
+
+60
+00:05:24,120 --> 00:05:31,160
+The bias value allows us to shift the activation regardless of the input, similar to the role
+
+61
+00:05:31,160 --> 00:05:33,520
+of the constant c in a linear function.
+
+62
+00:05:33,520 --> 00:05:39,440
+So the linear function is this, you may have seen it before.
+
+63
+00:05:39,440 --> 00:05:44,640
+So it's this b or bias value is very similar to the c in this.
+
+64
+00:05:44,640 --> 00:05:52,840
+And then we can almost, we can actually see this as, so m is our weights and x is our
+
+65
+00:05:52,840 --> 00:05:54,160
+inputs.
+
+66
+00:05:54,160 --> 00:05:56,280
+Okay.
+
+67
+00:05:56,280 --> 00:06:07,200
+So we can represent this four propagation of a neuron mathematically using this.
+
+68
+00:06:07,200 --> 00:06:08,200
+Okay.
+
+69
+00:06:08,200 --> 00:06:14,520
+So we have our output, which is what this y hat at the end here, we use this hat to denote
+
+70
+00:06:14,520 --> 00:06:18,720
+a prediction rather than a true value.
+
+71
+00:06:18,720 --> 00:06:24,760
+We have the activation function, which we denote with this g.
+
+72
+00:06:24,760 --> 00:06:27,880
+Again we'll speak about the activation function very soon.
+
+73
+00:06:27,880 --> 00:06:35,680
+We have the sum from i equals one all the way through to n, which is equivalent to m here.
+
+74
+00:06:35,680 --> 00:06:40,720
+We switch notation a bit quite often to be honest sometimes.
+
+75
+00:06:40,720 --> 00:06:44,480
+And i is just, okay, which, which position are we in?
+
+76
+00:06:44,480 --> 00:06:50,680
+So i equals one here, i equals two here and so on.
+
+77
+00:06:50,680 --> 00:06:58,480
+And then we also just add the bias term after we've summed all of those weights and activations,
+
+78
+00:06:58,480 --> 00:07:03,920
+impact activations, we have to bias onto the end of that.
+
+79
+00:07:03,920 --> 00:07:10,520
+So it's a relatively simple formula.
+
+80
+00:07:10,520 --> 00:07:21,440
+And what we tend to do in machine learning is actually use linear algebra to represent the
+
+81
+00:07:21,440 --> 00:07:25,320
+linear combination of the inputs and weights in vector format.
+
+82
+00:07:25,320 --> 00:07:26,320
+Okay.
+
+83
+00:07:26,320 --> 00:07:32,040
+So this formula here, we're using the capitalized x and w.
+
+84
+00:07:32,040 --> 00:07:34,000
+That is because x and w are vectors.
+
+85
+00:07:34,000 --> 00:07:35,000
+Okay.
+
+86
+00:07:35,000 --> 00:07:38,280
+They contain x1, x2 all the way through to xm.
+
+87
+00:07:38,280 --> 00:07:42,120
+And w1, w2 all the way through to wn.
+
+88
+00:07:42,120 --> 00:07:44,480
+And then we have this little t here.
+
+89
+00:07:44,480 --> 00:07:50,080
+That means that this x rather than being a vector, we're actually going to transpose it.
+
+90
+00:07:50,080 --> 00:07:58,520
+So that t means transpose into x1, x2 dot dot xn.
+
+91
+00:07:58,520 --> 00:07:59,520
+Okay.
+
+92
+00:07:59,520 --> 00:08:06,200
+And that's useful because we are going to perform a vector multiplication here between
+
+93
+00:08:06,200 --> 00:08:08,000
+x and w.
+
+94
+00:08:08,000 --> 00:08:14,760
+And to do that, we need, well, basically we need something that looks so the first shape
+
+95
+00:08:14,760 --> 00:08:17,000
+must be something like this.
+
+96
+00:08:17,000 --> 00:08:23,000
+And the second shape must be something like this.
+
+97
+00:08:23,000 --> 00:08:24,000
+Okay.
+
+98
+00:08:24,000 --> 00:08:32,280
+So that's why we're transposing to get that matchup in the end values on both of those shapes.
+
+99
+00:08:32,280 --> 00:08:43,240
+So at its core, that is how a neural network for propagation step works in a single neuron.
+
+100
+00:08:43,240 --> 00:08:46,120
+Of course, there is this g that we haven't spoken about yet.
+
+101
+00:08:46,120 --> 00:08:47,800
+That's the activation function.
+
+102
+00:08:47,800 --> 00:08:51,040
+So that's what we're going to cover next.
+
+103
+00:08:51,040 --> 00:08:56,640
+So I hope that's been useful and I will see you in the next class.

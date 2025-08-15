@@ -1,0 +1,9 @@
+Flask
+moviepy
+pydub
+langchain
+langchain-openai
+openai
+werkzeug
+pandas
+streamlit

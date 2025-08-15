@@ -1,0 +1,121 @@
+{
+  "transcript": " So we've been talking a lot about the neural net, but we haven't really gone into detail about what neural network is. So a neural network typically consists of, it contains three different types of layers. We have a input layer over here that takes input from our domain. So for example, the example that input may be image data transferred into numbers that we then push into the model. So that's the input layer that handles that. Then we have something called hidden layers. Now these are layers that are not the input or output layers. So these kind of hidden in the middle between those two. And they take input from one layer and pass the output to another layer. And you can have multiple hidden layers, chain one after the other. And that in fact, it is that that creates a deep learning model. And we have the output layer. So the output layer is the final layer that makes a prediction based on whatever was put under hidden layer and pass through all those hidden layers and then pass to the final output layer. So the perceptron is at its very core, almost like a single layer neural network with four main parameters. So we'll explain that in just a moment. But by putting all these perceptrons together, that is what creates a neural network. But let's have a look at what a perceptron looks like. So as I said, single layer neural network, four main parameters. We have the input values over here. We have the weights here. So this is those needs W's plus a bias term over here. We take some of these values and the weights and the biases, which is output, sorry, the inputs and weights and the biases, which is output from here. And then there is this activation function, which consumes that output and the sum outputs and outputs a different value, which is of course, then leads on to output. So this diagram here shows the forward propagation of information through a single neural network. When I say forward propagation, it's essentially the forward movement of information through a network. Here the information is defined by its inputs. We have x1, x2 all the way through to xm where m is just the number of features on number of input values in the network. And we of course take the sum of the multiplication of the inputs and their weights. So we multiply this x1 by w1, giving us something like this. And then we add on the, so we sum those, sorry. And then we add on the bias to the end of that, sorry, sorry. This calculation returns a single number. Depending so for each one of these values. So for x1, w1, we are going to output a final value here. So this will be, let's call it, just s1 for now. And then we would also, for example, s2 and all the way down to sm. These are all then fed into the activation function, sorry, go back to, I don't know, I said that wrong. So we go back because in this case, so this is to whoever's editing the video, in this case that's wrong, all of these sum together, so they do actually output a single value from the sum. So just go back to before, is there anything about having multiple values? So from all of these, this sum is actually going from one or x1, x2 all the way through to m and w1, 2 all the way through to m. All of that outputs a single value here. Okay, so our sum value, which we'll just call s for now. Okay, we don't actually use the notation s, but that's just what we will show here for now. And this sum value is fed into an activation function where it generates the apple, speak more of activation functions very soon. The bias value allows us to shift the activation regardless of the input, similar to the role of the constant c in a linear function. So the linear function is this, you may have seen it before. So it's this b or bias value is very similar to the c in this. And then we can almost, we can actually see this as, so m is our weights and x is our inputs. Okay. So we can represent this four propagation of a neuron mathematically using this. Okay. So we have our output, which is what this y hat at the end here, we use this hat to denote a prediction rather than a true value. We have the activation function, which we denote with this g. Again we'll speak about the activation function very soon. We have the sum from i equals one all the way through to n, which is equivalent to m here. We switch notation a bit quite often to be honest sometimes. And i is just, okay, which, which position are we in? So i equals one here, i equals two here and so on. And then we also just add the bias term after we've summed all of those weights and activations, impact activations, we have to bias onto the end of that. So it's a relatively simple formula. And what we tend to do in machine learning is actually use linear algebra to represent the linear combination of the inputs and weights in vector format. Okay. So this formula here, we're using the capitalized x and w. That is because x and w are vectors. Okay. They contain x1, x2 all the way through to xm. And w1, w2 all the way through to wn. And then we have this little t here. That means that this x rather than being a vector, we're actually going to transpose it. So that t means transpose into x1, x2 dot dot xn. Okay. And that's useful because we are going to perform a vector multiplication here between x and w. And to do that, we need, well, basically we need something that looks so the first shape must be something like this. And the second shape must be something like this. Okay. So that's why we're transposing to get that matchup in the end values on both of those shapes. So at its core, that is how a neural network for propagation step works in a single neuron. Of course, there is this g that we haven't spoken about yet. That's the activation function. So that's what we're going to cover next. So I hope that's been useful and I will see you in the next class.",
+  "summary": "**Summary of Key Concepts:**\n\n1. **Neural Network Structure**: A neural network consists of three types of layers:\n\t* Input layer: receives input from the domain (e.g., image data).\n\t* Hidden layers: process the input, can have multiple layers chained together.\n\t* Output layer: makes predictions based on the processed input.\n2. **Perceptron**: a single-layer neural network with four main parameters:\n\t* Inputs\n\t* Weights\n\t* Biases\n\t* Activation function\n3. **Forward Propagation**: the process of information flowing through a neural network, where each layer processes the output from the previous layer.\n4. **Activation Function**: a mathematical function that takes the output of a neuron and generates another value, which is then used as input to the next layer.\n5. **Bias Term**: allows shifting the activation function regardless of the input, similar to the constant c in a linear function.\n\n**Key Points:**\n\n1. The neural network propagation step can be represented mathematically using the formula:\n\t* y\u0302 = g(x^T w + b)\n2. The formula uses vector notation for inputs (x) and weights (w), with the bias term added at the end.\n3. The activation function (g) is applied to the output of each neuron, generating a new value that is used as input to the next layer.\n\n**Important Information:**\n\n1. Neural networks can be represented using linear algebra, which simplifies the calculation of the propagation step.\n2. The bias term allows for shifting the activation function, similar to the constant c in a linear function.\n3. The activation function plays a crucial role in determining the output of each neuron and is essential for training neural networks.",
+  "quiz": [
+    {
+      "question": "What are the three main types of layers in a neural network?",
+      "options": {
+        "a": "Input layer, Hidden layer, Output layer",
+        "b": "Hidden layer, Output layer, Input layer",
+        "c": "Activation function, Bias term, Weights",
+        "d": "Forward Propagation, Backward Propagation, Optimization"
+      },
+      "correct_answer": "a",
+      "explanation": "The correct answer is A because a neural network consists of an input layer to receive data, hidden layers for processing, and an output layer for making predictions."
+    },
+    {
+      "question": "What are the four main parameters of a Perceptron?",
+      "options": {
+        "a": "Inputs, Weights, Biases, Activation function",
+        "b": "Hidden layers, Output layer, Input layer, Forward Propagation",
+        "c": "Bias term, Weights, Inputs, Activation function",
+        "d": "Forward Propagation, Backward Propagation, Optimization, Loss function"
+      },
+      "correct_answer": "a",
+      "explanation": "The correct answer is A because a Perceptron has four main parameters: inputs, weights, biases, and an activation function."
+    },
+    {
+      "question": "What is the purpose of the bias term in a neural network?",
+      "options": {
+        "a": "To shift the activation function",
+        "b": "To scale the input data",
+        "c": "To add noise to the output",
+        "d": "To speed up computation"
+      },
+      "correct_answer": "a",
+      "explanation": "The correct answer is A because the bias term allows shifting the activation function, similar to a constant c in a linear function."
+    },
+    {
+      "question": "How can neural networks be represented mathematically?",
+      "options": {
+        "a": "Using vector notation and matrix multiplication",
+        "b": "Using scalar values and addition",
+        "c": "Using graph theory and nodes",
+        "d": "Using probability distributions and Bayes' theorem"
+      },
+      "correct_answer": "a",
+      "explanation": "The correct answer is A because neural networks can be represented mathematically using linear algebra, which simplifies the calculation of the propagation step."
+    },
+    {
+      "question": "What is the role of the activation function in a neural network?",
+      "options": {
+        "a": "To scale the input data",
+        "b": "To add noise to the output",
+        "c": "To determine the output of each neuron and train the network",
+        "d": "To speed up computation"
+      },
+      "correct_answer": "c",
+      "explanation": "The correct answer is C because the activation function plays a crucial role in determining the output of each neuron and is essential for training neural networks."
+    },
+    {
+      "question": "What is the formula for forward propagation in a neural network?",
+      "options": {
+        "a": "y\u0302 = g(x^T w)",
+        "b": "y\u0302 = x^T w",
+        "c": "y\u0302 = g(x^T w + b)",
+        "d": "y\u0302 = x + w"
+      },
+      "correct_answer": "c",
+      "explanation": "The correct answer is C because the formula for forward propagation in a neural network is y\u0302 = g(x^T w + b), where g is the activation function."
+    },
+    {
+      "question": "What is the purpose of the weights in a neural network?",
+      "options": {
+        "a": "To scale the input data",
+        "b": "To add noise to the output",
+        "c": "To determine the importance of each input feature",
+        "d": "To speed up computation"
+      },
+      "correct_answer": "c",
+      "explanation": "The correct answer is C because the weights in a neural network determine the importance of each input feature."
+    },
+    {
+      "question": "What type of function is used to represent the output of each neuron?",
+      "options": {
+        "a": "Linear function",
+        "b": "Non-linear function",
+        "c": "Polynomial function",
+        "d": "Exponential function"
+      },
+      "correct_answer": "b",
+      "explanation": "The correct answer is B because the output of each neuron is typically represented by a non-linear function, such as an activation function."
+    },
+    {
+      "question": "What is the process called when information flows through a neural network?",
+      "options": {
+        "a": "Backward Propagation",
+        "b": "Forward Propagation",
+        "c": "Optimization",
+        "d": "Loss function"
+      },
+      "correct_answer": "b",
+      "explanation": "The correct answer is B because the process of information flowing through a neural network is called forward propagation."
+    },
+    {
+      "question": "What type of algebra is used to represent neural networks?",
+      "options": {
+        "a": "Linear Algebra",
+        "b": "Graph Theory",
+        "c": "Probability Distributions",
+        "d": "Bayes' Theorem"
+      },
+      "correct_answer": "a",
+      "explanation": "The correct answer is A because neural networks can be represented using linear algebra, which simplifies the calculation of the propagation step."
+    }
+  ],
+  "metadata": {
+    "whisper_model": "base",
+    "llm_model": "llama3.1",
+    "source_file": "Introduction_to_neural_network.mp4"
+  }
+}
