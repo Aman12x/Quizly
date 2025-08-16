@@ -9,4 +9,4 @@ streamlit
 openai-whisper 
 ollama 
 langchain-community
-
+langchain_community
